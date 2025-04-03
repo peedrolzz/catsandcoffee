@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "fonte1";
+  src: url("img/LEMONMILK-Regular.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #fcf7f3;
+  scroll-behavior: smooth;
+  height: 100%;
+  font-family: "fonte1";
+}
+
+.navbar-brand img {
+  border-radius: 20% !important;
+}
+
+.custom-btn {
+  background-color: #dac8b3;
+  padding: 4px 10px;
+  font-size: 16px;
+  margin: 0 5px;
+  border: 2px solid #dac8b3;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #c3a793;
+  border-color: #c3a793;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.card-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-transform: none;
+}
+
+.desc {
+  font-family: "Arial", sans-serif;
+}
+
+.btncomprar {
+  background-color: #f5e3cc;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 15px;
+  text-transform: none;
+  transition: background-color 0.3s ease;
+}
+
+.btncomprar:hover {
+  background-color: #e6d5bf;
+}
+
+@media (max-width: 768px) {
+  .btn-cart {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .btn-cart img {
+    height: 10px;
+    width: auto;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

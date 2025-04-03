@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "fonte1";
+  src: url("img/LEMONMILK-Regular.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #fcf7f3;
+  scroll-behavior: smooth;
+  height: 100%;
+  font-family: "fonte1";
+}
+
+.navbar-brand img {
+  border-radius: 20%;
+}
+
+.custom-btn {
+  background-color: #dac8b3;
+  padding: 4px 10px;
+  font-size: 16px;
+  margin: 0 5px;
+  border: 2px solid #dac8b3;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #c3a793;
+  border-color: #c3a793;
+}
+
+.carousel-item {
+  height: 400px;
+  background-color: #dac8b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.text-section {
+  text-align: center;
+  padding: 70px 20px 20px;
+  color: #6f4e37;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .text-section {
+    padding: 70px 50px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-section {
+    padding: 70px 100px 20px;
+  }
+}
+
+footer {
+  background-color: #dac8b3;
+  padding: 20px 0;
+  color: #6f4e37;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

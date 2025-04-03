@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "fonte1";
+  src: url("img/LEMONMILK-Regular.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcf7f3;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  font-family: "fonte1";
+}
+
+.navbar-brand img {
+  border-radius: 20%;
+}
+
+.custom-btn {
+  background-color: #dac8b3;
+  padding: 4px 10px;
+  font-size: 16px;
+  margin: 0 5px;
+  border: 2px solid #dac8b3;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #bdaaa3;
+  border-color: #bdaaa3;
+}
+
+/* Estilo para a área onde fica o formulário de login e cadastro */
+.containerp {
+  margin-top: -5%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo principal do contêiner do formulário */
+.container1 {
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+/* Estilo para parágrafos dentro do contêiner */
+.container1 p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+/* Estilo para spans dentro do contêiner */
+.container1 span {
+  font-size: 12px;
+}
+
+/* Estilo para links dentro do contêiner */
+.container1 a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none; /* Remove o sublinhado azul feio dos links */
+  margin: 15px 0 10px;
+}
+
+/* Estilo para botões dentro do contêiner */
+.container1 button {
+  background-color: #d0b8a8;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px; /* Espaço entre as letrinhas */
+  text-transform: uppercase; /* Transformar tudo que é texto em maiúsculas */
+  margin-top: 10px;
+  cursor: pointer; /* Cursor fica igual uma maozinha quando em cima do botao */
+}
+
+/* Estilo para botões escondidos */
+.container1 button.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+/* Estilo para o formulário dentro do contêiner */
+.container1 form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  height: 100%;
+}
+
+/* Estilo para campos de entrada dentro do formulário */
+.container1 input {
+  background-color: #f2e9e1;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none; /* Remove o contorno padrão do navegador */
+}
+
+/* Estilo para o contêiner que engloba login e cadastro */
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Estiliza a seção de login */
+.sign-in {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+/* Animação para esconder a seção de login quando ativo */
+.container1.active .sign-in {
+  transform: translateX(100%);
+}
+
+/* Estilo para a seção de cadastro */
+.sign-up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Animação para mostrar a seção de cadastro quando ativo */
+.container1.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+
+/* Animação para a transição de opacidade e z-index */
+@keyframes move {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+/* Estilo para o contêiner de toggle (troca entre login e cadastro) */
+.toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden; /* Esconde o conteúdo que sai do contêiner */
+  transition: all 0.6s ease-in-out;
+  border-radius: 150px 0 0 100px;
+  z-index: 1000;
+}
+
+/* Animação para esconder o contêiner de toggle quando ativo */
+.container1.active .toggle-container {
+  transform: translateX(-100%);
+  border-radius: 0 150px 100px 0;
+}
+
+/* Estilo para o painel de toggle */
+.toggle {
+  background-color: #83624c;
+  height: 100%;
+  background: linear-gradient(to right, #d4bca5, #d0b8a8);
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+/* Animação para o painel de toggle quando o contêiner está ativo */
+.container1.active .toggle {
+  transform: translateX(50%);
+}
+
+/* Estilo para os painéis de toggle (esquerdo e direito) */
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+/* Estilo para o painel de toggle esquerdo */
+.toggle-left {
+  transform: translateX(-200%);
+}
+
+/* Animação para o painel de toggle esquerdo quando ativo */
+.container1.active .toggle-left {
+  transform: translateX(0);
+}
+
+/* Mesma coisa que em cima so que para o direito */
+
+.toggle-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* Mesma coisa que em cima so que para o direito */
+.container1.active .toggle-right {
+  transform: translateX(200%);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
